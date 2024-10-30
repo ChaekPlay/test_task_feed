@@ -25,10 +25,10 @@ onMounted(() => {
 
 <style>
 .post {
-  border: 1px solid grey;
+  border: 1px solid lightgray;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 4px;
-  background: rgb(248, 248, 248);
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 1.5rem;
+  padding: 16px;
 }
 </style>
