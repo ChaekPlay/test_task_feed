@@ -12,7 +12,7 @@
 </template>
 <script setup>
 import { defineProps, onMounted, ref } from "vue";
-import { colorContent } from "@/api/color_post";
+import { colorContent } from "@/helpers/color_content";
 const coloredContent = ref("");
 const props = defineProps(["content"]);
 onMounted(() => {

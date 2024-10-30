@@ -1,6 +1,4 @@
 export function colorContent(content, colorArray) {
-  // TODO: get position and length from color array
-  // TODO: make gradient
   let result = "";
   for (let i = 0; i < colorArray.length; i++) {
     let colorPart = content.substring(
@@ -20,12 +18,11 @@ export function colorContent(content, colorArray) {
   }
   return result;
 }
-
-// eslint-disable-next-line no-unused-vars
 function getColorFromTone(tone) {
   let redHueValue = 0;
   let greenHueValue = 120;
-  // translate (-1, 1) range to (0, 1)
-  let hslHue = ((greenHueValue - redHueValue) * (tone + 1)) / 2 + redHueValue;
+  // translate (-1, 1) range to (0, 1) and then calculate hue
+  let normalizedTone = (tone + 1) / 2;
+  let hslHue = ((greenHueValue - redHueValue) * normalizedTone) + redHueValue;
   return "hsl(" + hslHue + ", 100%, 75%)";
 }

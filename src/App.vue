@@ -1,6 +1,6 @@
 <template>
   <div class="view">
-    <h1>Feed</h1>
+    <h1>Лента постов</h1>
     <PostFeed/>
   </div>
 </template>
