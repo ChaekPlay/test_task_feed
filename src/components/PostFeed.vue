@@ -1,5 +1,6 @@
 <template>
   <div class="post-feed">
+    <p class="no-posts" v-if="posts.length == 0">Не удалось загрузить посты</p>
     <MessagePost v-for="post in posts" :key="post" :content="post" />
     <div id="load-more" :class="loadMoreStatus"></div>
   </div>
@@ -49,6 +50,10 @@ async function loadMore() {
 .post-feed {
   max-width: 1280px;
   margin: 0 auto;
+}
+.no-posts {
+  text-align: center;
+  padding: 16px;
 }
 #load-more {
   text-align: center;
